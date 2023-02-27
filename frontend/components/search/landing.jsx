@@ -1,0 +1,1 @@
+<a href="/auth/spotify">Connect with Spotify</a>
