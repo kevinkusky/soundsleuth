@@ -8,7 +8,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import GreetingContainer from './greeting/greeting_container';
+import GreetingContainer from './search/';
 import SearchContainer from './search/search_container';
 
 const App = () => (
@@ -17,13 +17,10 @@ const App = () => (
       <Link to="/" className="header-link">
         <h1>SoundSleuth</h1>
       </Link>
-      <GreetingContainer />
+      {/* <GreetingContainer /> */}
     </header>
-    <Switch>
-      {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
-      <Route exact path="/" component={SearchContainer} />
-    </Switch>
+    <h2>Hello World</h2>
+    <a href="/auth/spotify">Connect with Spotify</a>
   </div>
 );
 
