@@ -8,12 +8,10 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import GreetingContainer from './search/';
-import SearchContainer from './search/search_container';
 
 const App = () => (
   <div>
-    {console.log('booger');}
+    {console.log('booger')}
     <header>
       <Link to="/" className="header-link">
         <h1>SoundSleuth</h1>

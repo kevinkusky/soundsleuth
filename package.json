@@ -1,6 +1,29 @@
 {
   "name": "soundsleuth",
+  "version": "1.0.0",
+  "description": "Song Guessing Game",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "webpack": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinkusky/soundsleuth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinkusky/soundsleuth/issues"
+  },
+  "homepage": "https://github.com/kevinkusky/soundsleuth#readme",
   "dependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
@@ -11,6 +34,7 @@
     "react-router-dom": "^6.8.1",
     "redux": "^4.2.1",
     "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.2",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   }
