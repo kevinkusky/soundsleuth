@@ -6,7 +6,6 @@ import App from './app'
 const Root = ({ store }) => (
   <Provider store={store}>
     <HashRouter>
-      {console.log('boobies in my face')}
       <App />
     </HashRouter>  
   </Provider>
