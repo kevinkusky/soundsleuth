@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def spotify
-    redirect_to spotify_credentials[:authorize_url]
+    redirect_to spotify_auth_path
   end
 
   def spotify_callback
@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
       client_secret: ENV['SPOTIFY_CLIENT_SECRET'],
       authorize_url: 'https://accounts.spotify.com/authorize',
       scope: 'user-read-email user-read-private',
-      redirect_uri: 'http://localhost:3000/auth/spotify/callback',
+      redirect_uri: 'http://localhost:7532/auth/spotify/callback',
       response_type: 'code'
     }
   end

@@ -8,6 +8,9 @@
 #  spotify_refresh_token :string
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
+#  email                 :string
+#  display_name          :string
+#  image_url             :string
 #
 class User < ApplicationRecord
   validates :spotify_id, presence: true, uniqueness: true
