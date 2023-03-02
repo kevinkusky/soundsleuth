@@ -6,9 +6,9 @@ class UsersController < ApplicationController
     response = RestClient.post('https://accounts.spotify.com/api/token', {
       grant_type: 'authorization_code',
       code: code,
-      redirect_uri: ENV['redirect_uri'],
-      client_id: ENV['client_id'],
-      client_secret: ENV['client_secret']
+      redirect_uri: ENV['SPOTIFY_REDIRECT_URI'],
+      client_id: ENV['SPOTIFY_CLIENT_ID'],
+      client_secret: ENV['SPOTIFY_CLIENT_SECRET']
     })
   
     auth_data = JSON.parse(response.body)

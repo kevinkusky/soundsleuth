@@ -1,9 +1,10 @@
 class SessionsController < ApplicationController
   def spotify
-    redirect_to spotify_auth_path
+    spotify_auth_path(format: :html)
   end
 
   def spotify_callback
+    puts "spotify_callback called!"
     auth = request.env['omniauth.auth']
     session[:omniauth] = auth.except('extra')
     session[:user_id] = User.from_omniauth(auth).id
@@ -20,14 +21,12 @@ class SessionsController < ApplicationController
 
   private
 
-  def spotify_credentials
+  def spotify_auth_params
     {
       client_id: ENV['SPOTIFY_CLIENT_ID'],
-      client_secret: ENV['SPOTIFY_CLIENT_SECRET'],
-      authorize_url: 'https://accounts.spotify.com/authorize',
-      scope: 'user-read-email user-read-private',
-      redirect_uri: 'http://localhost:7532/auth/spotify/callback',
-      response_type: 'code'
+      response_type: 'code',
+      redirect_uri: ENV['SPOTIFY_REDIRECT_URI'],
+      scope: 'user-read-email user-read-private'
     }
   end
 end
