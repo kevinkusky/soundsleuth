@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'annotate'
 
 gem 'jquery-rails'
+gem 'bootstrap', '~> 5.0.2'
+gem 'dotenv-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

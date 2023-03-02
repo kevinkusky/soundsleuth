@@ -18,7 +18,7 @@ const App = () => (
       {/* <GreetingContainer /> */}
     </header>
     <h2>Hello World</h2>
-    <a href="/auth/spotify">Connect with Spotify</a>
+    <a target="_blank" href="/auth/spotify">Connect with Spotify</a>
   </div>
 );
 

@@ -5,4 +5,8 @@ class SessionsController < ApplicationController
     session[:user_id] = User.from_omniauth(auth).id
     redirect_to root_path
   end
+
+  def spotify
+    redirect_to '/auth/spotify'
+  end
 end
