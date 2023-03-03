@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'omniauth'
 gem 'omniauth-spotify'
+gem "omniauth-rails_csrf_protection"
+
 gem 'rspotify', '~> 2.9'
 
 # Use ActiveStorage variant
