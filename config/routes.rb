@@ -14,9 +14,9 @@
 Rails.application.routes.draw do
   root 'static_pages#root'
 
-  get 'auth/:provider/callback', to: 'sessions#create'
+  # get 'auth/:provider/callback', to: 'sessions#create'
   get '/login', to: 'sessions#new'
-  # get '/auth/:provider/callback', to: 'auth#spotify_callback'
+  get '/auth/:provider/callback', to: 'auth#spotify_callback'
   # get '/auth/failure', to: redirect('/')
-  # get '/auth/spotify', to: 'auth#spotify', as: 'spotify_auth'
+  get '/auth/spotify', to: 'auth#spotify', as: 'spotify_auth'
 end

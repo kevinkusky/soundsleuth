@@ -15,7 +15,11 @@ class AuthController < ApplicationController
     puts request_data
     
     # Get the access token and other details from Spotify
-    response = RestClient.post('https://accounts.spotify.com/api/token', request_data)
+    begin
+      response = RestClient.post('https://accounts.spotify.com/api/token', request_data)
+    rescue RestClient::ExceptionWithResponse => e
+      e.response
+    end
 
     puts response.body
   

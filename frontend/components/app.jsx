@@ -19,6 +19,8 @@ const App = () => (
     </header>
     <h2>Hello World</h2>
     <a target="_blank" href="/auth/spotify">Connect with Spotify</a>
+    <br/>
+    <a target="_blank" href="/login">Login with Spotify</a>
   </div>
 );
 
